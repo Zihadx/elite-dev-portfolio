@@ -32,7 +32,7 @@ export function FloatingNav() {
           aria-label="Back to top"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-white/10 to-white/[0.02] text-xs font-bold text-gradient shadow-inner">
-            AM
+            NZ
           </span>
           <span className="hidden font-display text-sm font-semibold tracking-tight text-foreground/95 sm:block">
             {site.name.split(" ")[0]}

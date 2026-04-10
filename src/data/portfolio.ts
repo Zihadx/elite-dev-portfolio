@@ -3,7 +3,7 @@
  */
 
 export const site = {
-  name: "Alex Mercer",
+  name: "Nur Zihad",
   role: "Full-Stack Engineer & Product Craftsman",
   tagline:
     "I architect resilient systems and luminous interfaces — where performance meets poetry.",

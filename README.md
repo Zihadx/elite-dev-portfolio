@@ -1,6 +1,15 @@
-# Elite Dev Portfolio
+# Nur Zihad — Portfolio
 
 A production-ready developer portfolio built with **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS**, and **shadcn/ui**-style primitives. It features a dark luxury aesthetic—glassmorphism, cinematic lighting, Framer Motion micro-interactions, and a custom cursor on desktop.
+
+## Live site
+
+| | |
+| --- | --- |
+| **Production** | [elite-dev-portfolio-zihadxs-projects.vercel.app](https://elite-dev-portfolio-zihadxs-projects.vercel.app) |
+| **Vercel project** | [vercel.com/zihadxs-projects/elite-dev-portfolio](https://vercel.com/zihadxs-projects/elite-dev-portfolio) |
+
+Set `NEXT_PUBLIC_SITE_URL` in Vercel to your primary domain (no trailing slash) so metadata matches production.
 
 ## Features
 
