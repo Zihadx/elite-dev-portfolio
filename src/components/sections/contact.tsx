@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail, Send, Twitter } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
-import { site } from "@/data/portfolio";
+import { site } from "@/data";
 import { MotionReveal } from "@/components/ui/motion-reveal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

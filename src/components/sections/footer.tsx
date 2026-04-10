@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import { navItems, site } from "@/data/portfolio";
+import { navItems, site } from "@/data";
 
 export function Footer() {
   const year = new Date().getFullYear();

@@ -10,7 +10,7 @@ import {
   Wrench,
 } from "lucide-react";
 
-import { skillCategories } from "@/data/portfolio";
+import { skillCategories } from "@/data";
 import { MotionReveal } from "@/components/ui/motion-reveal";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 const icons: LucideIcon[] = [LayoutGrid, Server, Sparkles, Wrench];

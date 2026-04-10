@@ -5,7 +5,7 @@ import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { projects, type Project } from "@/data/portfolio";
+import { projects, type Project } from "@/data";
 import { MotionReveal } from "@/components/ui/motion-reveal";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { cn } from "@/lib/utils";

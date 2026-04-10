@@ -56,14 +56,13 @@ This powers canonical URLs, Open Graph metadata, and structured data in `src/app
 
 ## Customizing content
 
-Edit **`src/data/portfolio.ts`**:
+Edit **`src/data/`** (see `index.ts` for the public exports):
 
-- Name, role, tagline, email, location, social links
-- Navigation labels and section IDs
-- About copy and strengths
-- Projects (images, stack, live/repo URLs, bento `span` sizes)
-- Skill categories and levels
-- Experience timeline entries
+- **`site.ts`** — name, role, tagline, email, location, social links, nav items
+- **`about.ts`**, **`skills.ts`**, **`experience.ts`** — section copy
+- **`projects.ts`** — case studies (images, stack, links, bento `span`)
+- **`hero.ts`** — hero taglines and profile card lines
+- **`types.ts`** — shared types such as `Project`
 
 Replace placeholder images with your own assets under `public/` or update remote URLs in `next.config.ts` (`images.remotePatterns`).
 
@@ -88,12 +87,12 @@ Replace placeholder images with your own assets under `public/` or update remote
 src/
   app/                 # App Router: layout, page, globals, loading
   components/
-    layout/            # Nav, cursor, ambient glow, loader, noise
-    sections/          # Page sections
-    ui/                  # Reusable UI (button, card, inputs, etc.)
-  data/portfolio.ts    # All copy and project data
-  hooks/               # Active section, mouse, reduced motion
-  lib/utils.ts         # cn() helper
+    layout/            # Shell UI (nav, cursor, glow, loader, noise)
+    sections/          # Page sections (hero/ is a subfolder)
+    ui/                  # Reusable primitives
+  data/                # Content split by domain (see data/index.ts)
+  hooks/               # Scroll, motion, and interaction hooks
+  lib/                 # motion, scroll, branding, cn()
 ```
 
 ## License

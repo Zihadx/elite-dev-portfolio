@@ -3,19 +3,16 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-import { navItems, site } from "@/data/portfolio";
+import { navItems, site } from "@/data";
 import { useActiveSection } from "@/hooks/use-active-section";
+import { initialsFromName } from "@/lib/branding";
+import { scrollToSection } from "@/lib/scroll";
 import { cn } from "@/lib/utils";
 
 const ids = navItems.map((n) => n.id);
 
 export function FloatingNav() {
   const active = useActiveSection(ids);
-
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    el?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
 
   return (
     <header className="fixed left-0 right-0 top-0 z-[90] px-4 pt-4 md:px-8">
@@ -27,12 +24,12 @@ export function FloatingNav() {
       >
         <button
           type="button"
-          onClick={() => scrollTo("hero")}
+          onClick={() => scrollToSection("hero")}
           className="group flex items-center gap-2 text-left"
           aria-label="Back to top"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-white/10 to-white/[0.02] text-xs font-bold text-gradient shadow-inner">
-            NZ
+            {initialsFromName(site.name)}
           </span>
           <span className="hidden font-display text-sm font-semibold tracking-tight text-foreground/95 sm:block">
             {site.name.split(" ")[0]}
@@ -50,7 +47,7 @@ export function FloatingNav() {
               <button
                 key={item.id}
                 type="button"
-                onClick={() => scrollTo(item.id)}
+                onClick={() => scrollToSection(item.id)}
                 className={cn(
                   "relative rounded-xl px-3 py-2 text-xs font-medium tracking-wide transition-colors",
                   isActive
@@ -82,7 +79,7 @@ export function FloatingNav() {
           </Link>
           <button
             type="button"
-            onClick={() => scrollTo("contact")}
+            onClick={() => scrollToSection("contact")}
             className="magnetic-btn rounded-xl bg-gradient-to-r from-violet-500/90 to-indigo-600/90 px-4 py-2 text-xs font-semibold text-white shadow-[0_0_20px_-4px_hsl(var(--glow-primary)/0.55)] hover:brightness-110"
           >
             Let&apos;s talk
@@ -96,7 +93,7 @@ export function FloatingNav() {
           <button
             key={item.id}
             type="button"
-            onClick={() => scrollTo(item.id)}
+            onClick={() => scrollToSection(item.id)}
             className={cn(
               "shrink-0 rounded-full border px-3 py-1.5 text-[11px] font-medium",
               active === item.id

@@ -4,18 +4,13 @@ import { motion } from "framer-motion";
 
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
-/**
- * Slow drifting glow blobs behind the hero for depth.
- */
+/** Slow drifting glow blobs behind the hero for depth. */
 export function AmbientOrbs() {
   const reduced = useReducedMotion();
 
   if (reduced) {
     return (
-      <div
-        className="pointer-events-none absolute inset-0 -z-10"
-        aria-hidden
-      />
+      <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden />
     );
   }
 

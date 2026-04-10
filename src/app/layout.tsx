@@ -1,12 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, JetBrains_Mono, Syne } from "next/font/google";
 
-import { AmbientGlow } from "@/components/layout/ambient-glow";
-import { CustomCursor } from "@/components/layout/custom-cursor";
-import { FloatingNav } from "@/components/layout/floating-nav";
-import { NoiseOverlay } from "@/components/layout/noise-overlay";
-import { PageLoader } from "@/components/layout/page-loader";
-import { site } from "@/data/portfolio";
+import {
+  AmbientGlow,
+  CustomCursor,
+  FloatingNav,
+  NoiseOverlay,
+  PageLoader,
+} from "@/components/layout";
+import { site } from "@/data";
 
 import "./globals.css";
 

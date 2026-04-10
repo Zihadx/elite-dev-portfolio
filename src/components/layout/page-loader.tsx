@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-import { site } from "@/data/portfolio";
+import { site } from "@/data";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 /**

@@ -5,7 +5,7 @@ import { ArrowUpRight, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { featuredProject } from "@/data/portfolio";
+import { featuredProject } from "@/data";
 import { MotionReveal } from "@/components/ui/motion-reveal";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 

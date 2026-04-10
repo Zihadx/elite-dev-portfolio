@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { experience } from "@/data/portfolio";
+import { experience } from "@/data";
 import { MotionReveal } from "@/components/ui/motion-reveal";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
