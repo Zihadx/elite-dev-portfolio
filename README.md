@@ -6,8 +6,7 @@ A production-ready developer portfolio built with **Next.js 15 (App Router)**, *
 
 | | |
 | --- | --- |
-| **Production** | [elite-dev-portfolio-zihadxs-projects.vercel.app](https://elite-dev-portfolio-zihadxs-projects.vercel.app) |
-| **Vercel project** | [vercel.com/zihadxs-projects/elite-dev-portfolio](https://vercel.com/zihadxs-projects/elite-dev-portfolio) |
+| **Production** | [https://elite-dev-portfolio-chi.vercel.app/](https://elite-dev-portfolio-chi.vercel.app/) |
 
 Set `NEXT_PUBLIC_SITE_URL` in Vercel to your primary domain (no trailing slash) so metadata matches production.
 
