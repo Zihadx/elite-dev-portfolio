@@ -6,18 +6,21 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { cn } from "@/lib/utils";
 
-type MagneticButtonProps = React.HTMLAttributes<HTMLDivElement> & {
+type MagneticButtonProps = {
+  className?: string;
   strength?: number;
+  children: React.ReactNode;
 };
 
 /**
  * Subtle magnetic pull toward cursor — use on CTAs.
+ * Props are intentionally narrow: React's DOM `onAnimationStart` etc. clash with
+ * Framer Motion's `motion.div` types when spread onto the component.
  */
 export function MagneticButton({
   className,
   strength = 0.35,
   children,
-  ...props
 }: MagneticButtonProps) {
   const reduced = useReducedMotion();
   const x = useMotionValue(0);
@@ -45,7 +48,6 @@ export function MagneticButton({
       style={{ x: sx, y: sy }}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
-      {...props}
     >
       {children}
     </motion.div>
